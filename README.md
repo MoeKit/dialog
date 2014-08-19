@@ -3,14 +3,14 @@
 ---
 
 [![spm package](http://spmjs.io/badge/arale-dialog)](http://spmjs.io/package/arale-dialog)
-[![Build Status](https://secure.travis-ci.org/aralejs/dialog.png)](https://travis-ci.org/aralejs/dialog)
-[![Coverage Status](https://coveralls.io/repos/aralejs/dialog/badge.png?branch=master)](https://coveralls.io/r/aralejs/dialog)
+[![Build Status](https://img.shields.io/travis/aralejs/dialog.svg?style=flat)](https://travis-ci.org/aralejs/dialog)
+[![Coverage Status](https://img.shields.io/coveralls/aralejs/dialog.svg?style=flat)](https://coveralls.io/r/aralejs/dialog)
 
 基础对话框组件，提供对话框显示隐藏、dom 结构自定义、定位、select 遮挡、确定取消关闭等功能特性。
 
 本模块分为两个子组件：Dialog 和 ConfirmBox，前者提供抽象的基础容器功能，无绑定 UI 样式，后者在前者的基础上提供模态对话框的功能并提供完善的 UI 样式。
 
-Dialog 组件预设了默认样式，请单独引用 [dialog.css](http://aralejs.org/dialog/src/dialog.css)。
+Dialog 组件提供了默认样式，请单独引用 [dialog.css](https://github.com/aralejs/dialog/blob/master/src/dialog.css)。
 
 ![对话框图](https://i.alipayobjects.com/e/201308/xqEbLhq3p.png)
 
@@ -111,5 +111,19 @@ dialogInstanse.on('complete:show', function() {
 > close 事件已经删除，可以使用 `.after('hide', function() {})` 来代替。
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/aralejs/dialog/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+## 委托绑定
+
+需要动态加载 trigger 时，可以使用如下方式进行委托绑定。
+
+```js
+// 不初始化 trigger
+var d = new Dialog({
+  content: '内容'
+});
+
+$('document').on('click', '.selector', function() {
+  d.activeTrigger = $(this);
+  d.show();
+});
+```
 
