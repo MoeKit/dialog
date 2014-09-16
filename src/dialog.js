@@ -26,6 +26,8 @@ var Dialog = Overlay.extend({
 
     // 统一样式前缀
     classPrefix: 'ui-dialog',
+    // ui-dialog 添加额外的类名
+    dialogClass: '',
 
     // 指定内容元素，可以是 url 地址
     content: {
@@ -211,6 +213,12 @@ var Dialog = Overlay.extend({
       }
     } else {
       this.element.hide();
+    }
+  },
+  // 添加额外类名
+  _onRenderDialogClass: function(val){
+    if(val){
+      this.element.addClass(val);
     }
   },
 

@@ -58,6 +58,9 @@ seajs.use('dialog', function(Dialog) {
 
 统一样式前缀，默认为 `ui-dialog`。
 
+### dialogClass *string*
+为dialog添加额外的类名，即不改变`classPrefix`时加在`.ui-dialog`上，方便进行样式自定义控制。
+
 ### closeTpl *string*
 
 右上角的关闭链接，默认为`×`。

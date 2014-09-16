@@ -99,6 +99,17 @@ describe('dialog', function () {
     });
   });
 
+  describe('dialogClass', function () {
+    it('should set dialogClass', function () {
+      example = new Dialog({
+        dialogClass: 'dialog-class',
+        content: 'with dialogClass'
+      });
+      example.show();
+      expect(example.element.hasClass('dialog-class')).to.be(true);
+    });
+  });
+
   describe('Height', function () {
     it('should init without height when type is dom', function () {
       example = new Dialog({

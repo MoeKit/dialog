@@ -152,3 +152,23 @@ seajs.use(['dialog','jquery'], function(Dialog, $) {
     });
 });
 ````
+
+### 9. 为.ui-dialog添加额外类名，方便样式控制
+<style>
+    .no-bg {background:none;}
+    .no-bg .ui-dialog-content {border-radius:5px;}
+</style>
+<button id="example9">内容传入DOM 对象</button>
+
+<div class="fn-hide"><div id="example9-dom" style="padding:50px">传入了dialogClass</div></div>
+
+
+````javascript
+seajs.use(['dialog','jquery'], function(Dialog, $) {
+    new Dialog({
+        trigger: '#example9',
+        dialogClass: 'no-bg',
+        content: $('#example9-dom')
+    });
+});
+````
