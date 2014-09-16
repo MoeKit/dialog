@@ -1,7 +1,7 @@
 var $ = require('jquery'),
     Overlay = require('arale-overlay'),
     mask = Overlay.Mask,
-    Events = require('arale-events'),
+    Events = require('eventor'),
     Templatable = require('arale-templatable');
 
 // Dialog
