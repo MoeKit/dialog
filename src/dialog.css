@@ -33,6 +33,7 @@
 .ui-dialog-close:hover {
     color: #666;
     text-shadow: 0 0 2px #aaa;
+    text-decoration: none;
 }
 
 .ui-dialog-title {

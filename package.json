@@ -24,6 +24,7 @@
   },
   "spm": {
     "main": "dialog.js",
+    "output": ["./src/dialog.css"],
     "dependencies": {
       "jquery": "1.8.3",
       "arale-overlay": "1.2.0",
