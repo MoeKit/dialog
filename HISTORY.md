@@ -5,8 +5,10 @@
 ## 1.4.1
 
 `new` 添加选项`dialogClass`,方便进行样式调整。
+`new` 添加选项`opacity`,可以进行遮罩透明度调整。
 `improved` jQuery 使用 1.8.3。
 `improved` arale-events 改为无bug的 `eventor`。
+
 
 ## 1.4.0
 

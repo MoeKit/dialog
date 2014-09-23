@@ -158,7 +158,7 @@ seajs.use(['dialog','jquery'], function(Dialog, $) {
     .no-bg {background:none;}
     .no-bg .ui-dialog-content {border-radius:5px;}
 </style>
-<button id="example9">内容传入DOM 对象</button>
+<button id="example9">添加额外类名</button>
 
 <div class="fn-hide"><div id="example9-dom" style="padding:50px">传入了dialogClass</div></div>
 
@@ -169,6 +169,21 @@ seajs.use(['dialog','jquery'], function(Dialog, $) {
         trigger: '#example9',
         dialogClass: 'no-bg',
         content: $('#example9-dom')
+    });
+});
+````
+
+### 10. 改变遮罩透明度
+
+<button id="example10">打开透明度为0.8的对话框</button>
+
+````javascript
+seajs.use(['dialog','jquery'], function(Dialog, $) {
+    var example = new Dialog({
+        trigger: '#example10',
+        content: $('#example9-dom'),
+        opacity: 0.8,
+        initialHeight: 150
     });
 });
 ````

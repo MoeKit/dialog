@@ -69,6 +69,9 @@ var Dialog = Overlay.extend({
     // 是否自适应高度
     autoFit: true,
 
+    // 透明度
+    opacity: 0.5,
+
     // 默认定位居中
     align: {
       value: {
@@ -247,7 +250,9 @@ var Dialog = Overlay.extend({
       }
       // not using the z-index
       // because multiable dialogs may share same mask
-      mask.set('zIndex', that.get('zIndex')).show();
+      mask.set('zIndex', that.get('zIndex'))
+        .set('opacity',that.get('opacity') || 0.5)
+        .show();
       mask.element.insertBefore(that.element);
 
       // 避免重复存放

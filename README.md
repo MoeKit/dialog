@@ -82,6 +82,10 @@ seajs.use('dialog', function(Dialog) {
 
 简单的动画效果，none 为无动画，fade 为渐入效果。默认为 none。
 
+### opacity *number*
+
+遮罩透明度
+
 ### autoFit *boolean*
 
 内嵌 Iframe 页面时是否自适应高度，默认为 true。`iframe 类型时有效`
